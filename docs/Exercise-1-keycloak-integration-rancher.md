@@ -1,21 +1,24 @@
-# Kubernetes Management with SUSE Rancher on Microsoft Azure
+# Keycloak integration with Rancher
 
-## Abstract and learning objectives
 
-This is an in-depth workshops designed to give DevOps and IT teams the hands-on skills they need to deploy and manage Kubernetes everywhere with SUSE Rancher running on Microsoft Azure.
 
-The content will be delivered by technical experts and aim to educate anyone interested in learning how to use containers or Kubernetes.
+As a part the workshop we have deployed SUSE Rancher Server, Keycloak and EFK Stack for you.
 
-During these virtual hands-on workshops, our technical experts will provide an introduction to Rancher, Docker, and Kubernetes and then walk through the steps for deploying a Kubernetes cluster.
+The credentails for accessing above environemnt has been emailed to you on your registered email address which you have provided during workshop reistration.
 
-The key topics that will be covered at the workshop include:
 
-- Docker and Kubernetes Concepts and Architecture
-- Installation and Configuration of Rancher Server
-- Kubernetes Cluster Deployment
-- Application Deployment and Access
 
-## Overview
+
+
+## Accessing SUSE Rancher server
+
+The url for accessing SUSE rancher is already shared over eamil, please copy and past in your favorite browser window.
+
+
+
+![rancher-server-login-prompt-2](../images/rancher-server-login-prompt-2-1645004752972.jpg)
+
+
 
 TODO: Describe a scenario here.
 
