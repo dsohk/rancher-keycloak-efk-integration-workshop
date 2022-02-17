@@ -80,13 +80,31 @@ In-case if you URL fail to load, check the URL. It should be "https://keycloak.I
 
 Provide the Keycloak credentials
 
+![keycloak-login-click-administration-console-2](../images/keycloak-login-click-administration-console-2.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
-Upon successfull login, you w
+Upon successfull login, you will be 
 
 
 
 ![keycloak-manage-users-click-add-user-9](../images/keycloak-manage-users-click-add-user-9.jpg)
+
+
 
 
 
