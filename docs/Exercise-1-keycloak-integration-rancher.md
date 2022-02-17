@@ -48,7 +48,7 @@ Home > Configuration > Users and Authentication
 
 
 
-Under User & Authentication, you can view/create User, Role & Manage external Authentication Provider. 
+Under User & Authentication, you can view/create User, Role & Manage external Authentication Provider.  
 
 Under Users, you will local admin for Rancher. Rancher provide a unquie ID to the user for it's records.
 
@@ -72,25 +72,41 @@ To access Keycloak, revisit our email shared which has the URL and credentials f
 
 Since Keycloak is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on the link "Proceed to Keycloak-IP.sslip.io (unsafe)" to login.
 
+In-case if you URL fail to load, check the URL. It should be "https://keycloak.IP.sslip.io"  
 
+![keycloak-access-url-error](../images/keycloak-access-url-error.jpg)
 
 ![keycloak-login-security-certificate-1](../images/keycloak-login-security-certificate-1.jpg)
 
+Provide the Keycloak credentials
 
+![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
-asdfasd
-
-
-
-asdfasd
-
+Upon successfull login, you w
 
 
 
+![keycloak-manage-users-click-add-user-9](../images/keycloak-manage-users-click-add-user-9.jpg)
 
 
 
+![keycloak-manage-users-click-add-user-save-10](../images/keycloak-manage-users-click-add-user-save-10.jpg)
 
+
+
+![keycloak-manage-users-click-add-user-save-success-11](../images/keycloak-manage-users-click-add-user-save-success-11.jpg)
+
+
+
+![keycloak-manage-users-rancher-credentails-set-passowrd-12](../images/keycloak-manage-users-rancher-credentails-set-passowrd-12.jpg)
+
+
+
+![keycloak-manage-users-rancher-credentails-set-passowrd-prompt-13](../images/keycloak-manage-users-rancher-credentails-set-passowrd-prompt-13.jpg)
+
+
+
+![keycloak-move-mouse-pointer-towards-master-click-add-realm-4](../images/keycloak-move-mouse-pointer-towards-master-click-add-realm-4.jpg)
 
 
 
@@ -104,7 +120,7 @@ https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-
 
 ![rancher-keycloak-oidc-pre-requisites-url-link](../images/rancher-keycloak-oidc-pre-requisites-url-link.jpg)
 
-
+![rancher-keycloak-oidc-pre-requisites-url-link](../images/rancher-keycloak-oidc-pre-requisites-url-link-16451131964621.jpg)
 
 
 
