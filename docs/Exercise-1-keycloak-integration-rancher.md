@@ -12,7 +12,7 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 ## Accessing SUSE Rancher server
 
-The url for accessing SUSE rancher is already shared over eamil, please copy and past in your favorite browser window.
+The url for accessing SUSE rancher is already shared over email, please copy and past in your favorite browser window.
 
 
 
@@ -20,7 +20,7 @@ The url for accessing SUSE rancher is already shared over eamil, please copy and
 
 
 
-Since Rancher is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely accept & process to login using the "Proceed to rancher IP.sslip.io (unsafe)"
+Since Rancher is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on link "Proceed to rancher-IP.sslip.io (unsafe)" to login.
 
 
 
@@ -48,7 +48,41 @@ Home > Configuration > Users and Authentication
 
 
 
-<Vijay> ---We need to add one picture to depict the user visible.  
+Under User & Authentication, you can view/create User, Role & Manage external Authentication Provider. 
+
+Under Users, you will local admin for Rancher. Rancher provide a unquie ID to the user for it's records.
+
+![rancher-server-users-homepage-7-1](../images/rancher-server-users-homepage-7-1.jpg)
+
+To access list of available External Authentication provider click on Auth Provider. 
+
+![rancher-server-users-authentication-auth-provider-7](../images/rancher-server-users-authentication-auth-provider-7.jpg)
+
+For our workshop we will be using Keycloak OIDC. Below is the configuration we will require to the configure KeyClock with Rancher. 
+
+![rancher-server-users-authentication-auth-provider-click-keycloak-oidc-8](../images/rancher-server-users-authentication-auth-provider-click-keycloak-oidc-8-16450758685396.jpg)
+
+
+
+In the upcoming section, we will configure Keyclock integration with Rancher 
+
+## Accessing Keycloak server
+
+To access Keycloak, revisit our email shared which has the URL and credentials for accessing Keycloak server.  You can use your favorite browser and credential provided to Login in Keycloak. 
+
+Since Keycloak is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on the link "Proceed to Keycloak-IP.sslip.io (unsafe)" to login.
+
+
+
+![keycloak-login-security-certificate-1](../images/keycloak-login-security-certificate-1.jpg)
+
+
+
+asdfasd
+
+
+
+asdfasd
 
 
 
@@ -61,6 +95,14 @@ Home > Configuration > Users and Authentication
 
 
 
+
+Rancher Documentation link to configure Keycloak (OIDC). 
+
+While creating the documenation, Rancher Stable version was 2.6.3. You can toggle to different version based on your requirement. 
+
+https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-oidc/
+
+![rancher-keycloak-oidc-pre-requisites-url-link](../images/rancher-keycloak-oidc-pre-requisites-url-link.jpg)
 
 
 
