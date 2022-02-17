@@ -20,6 +20,76 @@ The url for accessing SUSE rancher is already shared over eamil, please copy and
 
 
 
+Since Rancher is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely accept & process to login using the "Proceed to rancher IP.sslip.io (unsafe)"
+
+![rancher-server-login-security-certificate-1](../../../rancher-server-login-security-certificate-1.jpg)
+
+
+
+Your Rancher credentials are email to you, so use the credential provided to login. 
+
+Once you login, you will be at the Rancher Homepage, You should be able to see 3 Cluster which are pre-provisioned as part of the workshop.
+
+![rancher-server-initial-login-dashboard-3](../../../rancher-server-initial-login-dashboard-3.jpg)
+
+For management of the cluster you can navigate to Global Apps > Cluster Management > Clusters
+
+![rancher-server-click-cluster-management-4](../../../rancher-server-click-cluster-management-4.jpg)
+
+You will all cluster in the cluster list.
+
+![rancher-server-cluster-management-view-5](../../../rancher-server-cluster-management-view-5.jpg)
+
+For this workshop we are instresed in User & Authentication.  To Navigate to the section where you can create & manage User, 
+
+Home > Configuration > Users and Authentication
+
+![rancher-server-click-users-authentication-6](../../../rancher-server-click-users-authentication-6.jpg)
+
+<Vijay> ---We need to add one picture to depict the user visible.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 TODO: Describe a scenario here.
 
 ## Solution architecture
