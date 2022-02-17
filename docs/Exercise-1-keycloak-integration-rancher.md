@@ -22,9 +22,9 @@ The url for accessing SUSE rancher is already shared over eamil, please copy and
 
 Since Rancher is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely accept & process to login using the "Proceed to rancher IP.sslip.io (unsafe)"
 
-![rancher-server-login-security-certificate-1](../../../rancher-server-login-security-certificate-1.jpg)
 
 
+![rancher-server-login-security-certificate-1](../images/rancher-server-login-security-certificate-1-16450745768191.jpg)
 
 Your Rancher credentials are email to you, so use the credential provided to login. 
 
