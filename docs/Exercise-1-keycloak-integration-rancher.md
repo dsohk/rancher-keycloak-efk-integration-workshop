@@ -30,21 +30,23 @@ Your Rancher credentials are email to you, so use the credential provided to log
 
 Once you login, you will be at the Rancher Homepage, You should be able to see 3 Cluster which are pre-provisioned as part of the workshop.
 
-![rancher-server-initial-login-dashboard-3](../../../rancher-server-initial-login-dashboard-3.jpg)
+![rancher-server-initial-login-dashboard-3](../images/rancher-server-initial-login-dashboard-3-16450749401012.jpg)
 
 For management of the cluster you can navigate to Global Apps > Cluster Management > Clusters
 
-![rancher-server-click-cluster-management-4](../../../rancher-server-click-cluster-management-4.jpg)
+![rancher-server-click-cluster-management-4](../images/rancher-server-click-cluster-management-4-16450749715183.jpg)
 
 You will all cluster in the cluster list.
 
-![rancher-server-cluster-management-view-5](../../../rancher-server-cluster-management-view-5.jpg)
+![rancher-server-cluster-management-view-5](../images/rancher-server-cluster-management-view-5-16450749978104.jpg)
 
 For this workshop we are instresed in User & Authentication.  To Navigate to the section where you can create & manage User, 
 
 Home > Configuration > Users and Authentication
 
-![rancher-server-click-users-authentication-6](../../../rancher-server-click-users-authentication-6.jpg)
+![rancher-server-click-users-authentication-6](../images/rancher-server-click-users-authentication-6-16450750196325.jpg)
+
+
 
 <Vijay> ---We need to add one picture to depict the user visible.  
 
