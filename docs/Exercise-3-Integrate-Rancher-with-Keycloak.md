@@ -34,7 +34,9 @@ Client ID = "rancher"
 
 
 
-Copy Keycloak client certificate emailed to you << Need to check with Derek how to share to attendees
+The Keycloak Client Certificate and Private key has been shared over an email used during registration of this workshop, open them with notepad editor of your choice and copy & paste in the relevant section below.
+
+
 
 ![rancher-server-copy-keycloak-ssl-certificate-2](../images/rancher-server-copy-keycloak-ssl-certificate-2.jpg)
 
@@ -124,29 +126,4 @@ Once you are authenticated successfully, your Keycloak OIDC will tune to active 
 
 With this, we have successfully completed all required steps in Exercise 3. We are ready to move to the Exercise 4 [Exercise-4-Create-Keycloak-Users-Role-Mapping](./Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Having trouble?
-
-First, verify you have followed all written lab instructions (including the Before the Hands-on lab document).
-
-Next, submit an issue with a detailed description of the problem.
-
-Do not submit pull requests. Our content authors will make all changes and submit pull requests for approval.
-
-If you are planning to present a workshop, review and test the materials early! We recommend at least two weeks prior.
-
-Please allow 5 - 10 business days for review and resolution of issues.
 
