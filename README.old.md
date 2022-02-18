@@ -3,11 +3,11 @@ Hands-on Workshop Guide for learning Rancher, Kubernetes and more.
 
 This repository contains all the scripts and Kubernetes manifests for complimenting its hands-on workshop.
 
-- [Part 1 - Initial Lab Setup on AWS Lightsail](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-1.md)
-- [Part 2 - Configure GitHub & Jenkins](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-2.md)
-- [Part 3 - Configure Jenkins Pipeline to deploy spring-petclinic App](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-3.md)
-- [Part 4 - Rancher Continuous Delivery](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-4.md)
-- [Part 5 - Put it all together](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-5.md)
+- [Part 1 - Accessing Rancher and Keycloak](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-1-Accessing-Rancher-and-Keycloak.md)
+- [Part 2 - Configure Keycloak](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-2.md)
+- [Part 3 - Integrate Rancher with Keycloak](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-3.md)
+- [Part 4 - Create Keycloak Users & Role Mapping](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-4.md)
+- [Part 5 - Rancher Role Assignment and RBAC](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-5.md)
 - [Part 6 - Lab Clean Up](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-6.md)
 
 # References

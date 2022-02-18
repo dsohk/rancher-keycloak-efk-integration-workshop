@@ -43,11 +43,12 @@ This is what we are going to build in this workshop. We will create a resource g
 
 This repository contains all the scripts and Kubernetes manifests for complimenting its hands-on workshop.
 
-- [Part 1 - Initial Lab Setup on AWS Lightsail](./docs/part-1.md)
-- [Part 2 - Configure GitHub & Jenkins](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-2.md)
-- [Part 3 - Configure Jenkins Pipeline to deploy spring-petclinic App](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-3.md)
-- [Part 4 - Rancher Continuous Delivery](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-4.md)
-- [Part 5 - Put it all together](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-5.md)
+- [Exercise-1-Accessing-Rancher-and-Keycloak](./docs/Exercise-1-Accessing-Rancher-and-Keycloak.md)
+- [Exercise-2-Configure-Keycloak.md](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-2-Configure-Keycloak.md)
+- [Exercise-3-Integrate-Rancher-with-Keycloak](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-3-Integrate-Rancher-with-Keycloak.md)
+- [Exercise-4-Create-Keycloak-Users-Role-Mapping](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
+- [Exercise 5 - Rancher Roles & Assignment](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
+- 
 - [Part 6 - Lab Clean Up](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-6.md)
 - 
 
