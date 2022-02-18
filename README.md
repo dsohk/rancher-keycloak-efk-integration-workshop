@@ -44,10 +44,10 @@ This is what we are going to build in this workshop. We will create a resource g
 This repository contains all the scripts and Kubernetes manifests for complimenting its hands-on workshop.
 
 - [Exercise-1-Accessing-Rancher-and-Keycloak](./docs/Exercise-1-Accessing-Rancher-and-Keycloak.md)
-- [Exercise-2-Configure-Keycloak.md](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-2-Configure-Keycloak.md)
-- [Exercise-3-Integrate-Rancher-with-Keycloak](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-3-Integrate-Rancher-with-Keycloak.md)
-- [Exercise-4-Create-Keycloak-Users-Role-Mapping](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
-- [Exercise 5 - Rancher Roles & Assignment](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
+- [Exercise-2-Configure-Keycloak.md](./docs/Exercise-2-Configure-Keycloak.md)
+- [Exercise-3-Integrate-Rancher-with-Keycloak](./docs/Exercise-3-Integrate-Rancher-with-Keycloak.md)
+- [Exercise-4-Create-Keycloak-Users-Role-Mapping](./docs/Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
+- [Exercise 5 - Rancher Roles & Assignment](./docs/Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
 - 
 - [Part 6 - Lab Clean Up](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-6.md)
 - 
