@@ -98,7 +98,11 @@ Provide the Keycloak credentials
 
 ![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
-Upon successfull login, you will be 
+Upon successful login, you will be 
+
+![keycloak-move-mouse-pointer-towards-master-click-add-realm-4](../images/keycloak-move-mouse-pointer-towards-master-click-add-realm-4.jpg)
+
+
 
 
 
@@ -124,7 +128,7 @@ Upon successfull login, you will be
 
 
 
-![keycloak-move-mouse-pointer-towards-master-click-add-realm-4](../images/keycloak-move-mouse-pointer-towards-master-click-add-realm-4.jpg)
+
 
 
 
