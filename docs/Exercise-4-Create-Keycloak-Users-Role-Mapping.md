@@ -156,7 +156,7 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 
 
-
+With this, we have successfully completed all required steps in Exercise 4. We are ready to move to the Exercise 5 [Exercise 5 - Rancher Roles & Assignment](./Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
 
 
 

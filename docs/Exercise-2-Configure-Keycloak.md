@@ -334,3 +334,7 @@ For detail documentation, please refer to link below
 
 https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-oidc/
 
+
+
+With this, we have successfully completed all required steps in Exercise 2. We are ready to move to the Exercise 3 [Exercise-3-Integrate-Rancher-with-Keycloak](./Exercise-3-Integrate-Rancher-with-Keycloak.md)
+

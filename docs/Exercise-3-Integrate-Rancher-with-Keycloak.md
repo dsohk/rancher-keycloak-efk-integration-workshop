@@ -122,7 +122,7 @@ Once you are authenticated successfully, your Keycloak OIDC will tune to active 
 
 
 
-
+With this, we have successfully completed all required steps in Exercise 3. We are ready to move to the Exercise 4 [Exercise-4-Create-Keycloak-Users-Role-Mapping](./Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
 
 
 
@@ -149,3 +149,4 @@ Do not submit pull requests. Our content authors will make all changes and submi
 If you are planning to present a workshop, review and test the materials early! We recommend at least two weeks prior.
 
 Please allow 5 - 10 business days for review and resolution of issues.
+
