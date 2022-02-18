@@ -110,3 +110,6 @@ Upon successful login, you will be presented below keycloak homepage
 
 ![keycloak-initial-login-dashboard-4](../images/keycloak-initial-login-dashboard-4.jpg)
 
+
+
+With this, we have successfully completed all required steps in Part 1. We are ready to move to the Part 2 [Exercise-2-Configure-Keycloak.md](./docs/Exercise-2-Configure-Keycloak.md)
