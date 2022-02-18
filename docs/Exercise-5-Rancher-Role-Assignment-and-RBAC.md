@@ -1,4 +1,4 @@
-# Keycloak integration with Rancher
+# Rancher Role Assignment and RBAC
 
 
 
@@ -12,76 +12,57 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 ## Accessing SUSE Rancher server
 
-The url for accessing SUSE rancher is already shared over email, please copy and past in your favorite browser window.
 
 
+![Rancher-server-global-Permissions-1](../images/Rancher-server-global-Permissions-1.jpg)
 
-![rancher-server-login-prompt-2](../images/rancher-server-login-prompt-2-1645004752972.jpg)
 
 
+![Rancher-server-cluster-permissions-2](../images/Rancher-server-cluster-permissions-2.jpg)
 
-Since Rancher is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on link "Proceed to rancher-IP.sslip.io (unsafe)" to login.
 
 
+![Rancher-server-projects-namespace-roles-permissions-3](../images/Rancher-server-projects-namespace-roles-permissions-3.jpg)
 
-![rancher-server-login-security-certificate-1](../images/rancher-server-login-security-certificate-1-16450745768191.jpg)
 
-Your Rancher credentials are email to you, so use the credential provided to login. 
 
-Once you login, you will be at the Rancher Homepage, You should be able to see 3 Cluster which are pre-provisioned as part of the workshop.
+![rancher-server-after-integration-rancher-admin-assign-role-4](../images/rancher-server-after-integration-rancher-admin-assign-role-4.jpg)
 
-![rancher-server-initial-login-dashboard-3](../images/rancher-server-initial-login-dashboard-3-16450749401012.jpg)
 
-For management of the cluster you can navigate to Global Apps > Cluster Management > Clusters
 
-![rancher-server-click-cluster-management-4](../images/rancher-server-click-cluster-management-4-16450749715183.jpg)
+![rancher-server-after-integration-rancher-admin-default-role-standard-user-5](../images/rancher-server-after-integration-rancher-admin-default-role-standard-user-5.jpg)
 
-You will all cluster in the cluster list.
 
-![rancher-server-cluster-management-view-5](../images/rancher-server-cluster-management-view-5-16450749978104.jpg)
 
-For this workshop we are instresed in User & Authentication.  To Navigate to the section where you can create & manage User, 
+![rancher-server-after-integration-rancher-admin-assign-role-administrator-click-save-6](../images/rancher-server-after-integration-rancher-admin-assign-role-administrator-click-save-6.jpg)
 
-Home > Configuration > Users and Authentication
 
-![rancher-server-click-users-authentication-6](../images/rancher-server-click-users-authentication-6-16450750196325.jpg)
 
+![rancher-server-after-integration-superadmin-login-after-role-assignment-7](../images/rancher-server-after-integration-superadmin-login-after-role-assignment-7.jpg)
 
 
-Under User & Authentication, you can view/create User, Role & Manage external Authentication Provider.  
 
-Under Users, you will local admin for Rancher. Rancher provide a unquie ID to the user for it's records.
 
-![rancher-server-users-homepage-7-1](../images/rancher-server-users-homepage-7-1.jpg)
 
-To access list of available External Authentication provider click on Auth Provider. 
+![rancher-server-after-integration-superadmin-after-role-assignment-access-view-8](../images/rancher-server-after-integration-superadmin-after-role-assignment-access-view-8.jpg)
 
-![rancher-server-users-authentication-auth-provider-7](../images/rancher-server-users-authentication-auth-provider-7.jpg)
 
-For our workshop we will be using Keycloak OIDC. Below is the configuration we will require to the configure KeyClock with Rancher. 
 
-![rancher-server-users-authentication-auth-provider-click-keycloak-oidc-8](../images/rancher-server-users-authentication-auth-provider-click-keycloak-oidc-8-16450758685396.jpg)
 
 
+![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-9](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-9.jpg)
 
-In the upcoming section, we will configure Keyclock integration with Rancher 
 
-## Accessing Keycloak server
 
-To access Keycloak, revisit our email shared which has the URL and credentials for accessing Keycloak server.  You can use your favorite browser and credential provided to Login in Keycloak. 
 
-Since Keycloak is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on the link "Proceed to Keycloak-IP.sslip.io (unsafe)" to login.
 
-In-case if you URL fail to load, check the URL. It should be "https://keycloak.IP.sslip.io"  
+![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-10](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-10.jpg)
 
-![keycloak-access-url-error](../images/keycloak-access-url-error.jpg)
 
-![keycloak-login-security-certificate-1](../images/keycloak-login-security-certificate-1.jpg)
 
-Provide the Keycloak credentials
 
-![keycloak-login-click-administration-console-2](../images/keycloak-login-click-administration-console-2.jpg)
 
+![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-11](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-11.jpg)
 
 
 
@@ -93,75 +74,73 @@ Provide the Keycloak credentials
 
 
 
+![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-create-12](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-create-12.jpg)
 
 
 
-![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
-Upon successful login, you will be 
 
-![keycloak-move-mouse-pointer-towards-master-click-add-realm-4](../images/keycloak-move-mouse-pointer-towards-master-click-add-realm-4.jpg)
 
 
+![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-create-success-13](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-click-rbac-cluster-members-add-create-success-13.jpg)
 
 
 
-![keycloak-manage-users-click-add-user-9](../images/keycloak-manage-users-click-add-user-9.jpg)
 
 
 
 
+![rancher-server-after-integration-c1admin-login-after-role-assignment-14](../images/rancher-server-after-integration-c1admin-login-after-role-assignment-14.jpg)
 
-![keycloak-manage-users-click-add-user-save-10](../images/keycloak-manage-users-click-add-user-save-10.jpg)
 
 
+![rancher-server-after-integration-c1admin-login-after-role-assignment-access-view-15](../images/rancher-server-after-integration-c1admin-login-after-role-assignment-access-view-15.jpg)
 
-![keycloak-manage-users-click-add-user-save-success-11](../images/keycloak-manage-users-click-add-user-save-success-11.jpg)
 
 
 
-![keycloak-manage-users-rancher-credentails-set-passowrd-12](../images/keycloak-manage-users-rancher-credentails-set-passowrd-12.jpg)
 
 
 
-![keycloak-manage-users-rancher-credentails-set-passowrd-prompt-13](../images/keycloak-manage-users-rancher-credentails-set-passowrd-prompt-13.jpg)
+![17-rancher-server-after-integration-custom-project-role-creation-17](../images/17-rancher-server-after-integration-custom-project-role-creation-17.jpg)
 
 
 
 
 
+![18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18](../images/18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18.jpg)
 
 
 
 
-Rancher Documentation link to configure Keycloak (OIDC). 
 
-While creating the documenation, Rancher Stable version was 2.6.3. You can toggle to different version based on your requirement. 
 
-https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-oidc/
 
-![rancher-keycloak-oidc-pre-requisites-url-link](../images/rancher-keycloak-oidc-pre-requisites-url-link.jpg)
 
-![rancher-keycloak-oidc-pre-requisites-url-link](../images/rancher-keycloak-oidc-pre-requisites-url-link-16451131964621.jpg)
 
 
 
+![19-rancher-server-after-integration-custom-cluster-role-creation-19](../images/19-rancher-server-after-integration-custom-cluster-role-creation-19.jpg)
 
 
 
 
 
+![20-rancher-server-after-integration-dev1-user-member-role-assign-20](../images/20-rancher-server-after-integration-dev1-user-member-role-assign-20.jpg)
 
 
 
+![21-rancher-server-after-integration-dev1-user-custom-role-assign-21](../images/21-rancher-server-after-integration-dev1-user-custom-role-assign-21.jpg)
 
 
 
 
 
+![22-rancher-server-after-integration-dev2-user-custom-role-assign-22](../images/22-rancher-server-after-integration-dev2-user-custom-role-assign-22.jpg)
 
 
 
+![23-rancher-server-after-integration-dev2-user-custom-role-assign-view-all-projects-23](../images/23-rancher-server-after-integration-dev2-user-custom-role-assign-view-all-projects-23.jpg)
 
 
 
@@ -169,82 +148,73 @@ https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-
 
 
 
+![24-rancher-server-after-integration-all-users-role-assignment-24](../images/24-rancher-server-after-integration-all-users-role-assignment-24.jpg)
 
 
 
-TODO: Describe a scenario here.
 
-## Solution architecture
 
-Derek to provide the lab architecture.
+![25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25](../images/25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25.jpg)
 
-1 VM - Rancher server (RKE2), Keycloak with persistent storage 
 
-2 VM - Downstream RKE2 clusters (single node cluster)
 
-3 VM - RKE2 HA cluster (3 nodes) running EFK stack 
+![26-rancher-server-after-integration-dev1-user-create-project-26](../images/26-rancher-server-after-integration-dev1-user-create-project-26.jpg)
 
-All of the above environment will be pre-installed and made available for the workshop. The access  the workshop environment will be emailed to you on your registered email address for the workshop.
 
-In this workshop we will help you integrating Keycloak as an external authentication provider with Rancher, we will demonstrate authentication and authorization. further we will also look at integration of EFK stack integration with Rancher.
 
-  
 
-This is what we are going to build in this workshop. We will create a resource group to contain the resources to be deployed in this workshop. Then, we will deploy �Rancher Server as a VM within this resource group. We will then configure the Rancher Server to automate the provisioning of Kubernetes (based on RKE2) into the same resource group but different subnets. We will then explore some management and application deployment features in Rancher.
 
-[![Lab Solution Diagram](https://github.com/vijaymlinux/rancher-on-azure-workshop/raw/main/docs/images/suse-rancher-lab-diagram.png)](https://github.com/vijaymlinux/rancher-on-azure-workshop/blob/main/docs/images/suse-rancher-lab-diagram.png)
+![27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27](../images/27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27.jpg)
 
 
 
-This repository contains all the scripts and Kubernetes manifests for complimenting its hands-on workshop.
 
-- [Part 1 - Initial Lab Setup on AWS Lightsail](./docs/part-1.md)
-- [Part 2 - Configure GitHub & Jenkins](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-2.md)
-- [Part 3 - Configure Jenkins Pipeline to deploy spring-petclinic App](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-3.md)
-- [Part 4 - Rancher Continuous Delivery](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-4.md)
-- [Part 5 - Put it all together](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-5.md)
-- [Part 6 - Lab Clean Up](https://github.com/dsohk/rancher-devsecops-workshop/blob/main/docs/part-6.md)
-- 
 
-## Agenda
 
-09:15 – 09:30 – Introduction (15 mins)
 
-- Workshop Objectives
-- 
 
-09:30 – 9:45 - Keycloak integration with Rancher
 
-- Configuring Keycloak
 
-- Integration with Rancher
 
-  
+![28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28](../images/28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28.jpg)
 
-09:45 – 10:15 - Authentication & Authorisation
 
-- Creating users in Keycloak
-- User authentication
-- Configure and Assign roles
-- Authorisation
 
-11:00 – 11:15 BREAK
 
-11:15 – 12:15 – EFK (Elastic, FluentD and Kibana) integration with Rancher
 
-- Configuring Kibana
 
-- Configuring Rancher logging (FluentD)
 
-- Log shipping to Elastic Search
 
-- View logs in Kibana
 
-- Report Generation
+![29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29](../images/29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29.jpg)
 
-  
 
-13:15 - 13:30 - Q&A
+
+![30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30](../images/30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
