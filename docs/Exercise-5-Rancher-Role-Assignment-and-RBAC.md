@@ -32,6 +32,16 @@ For the users to perform the tasks they would need adequate permissions
 
 
 
+## Assigning Global permission to Manage Rancher Platform
+
+superadmin user is a regular user created in keycloak.
+
+By default, Rancher assigns Standard User Role which allows him create and manage new clusters, however they will not be able to manage any other clusters as well as rancher management platform.
+
+For him to manage Rancher management platform we need to elevate his permissions in Rancher and granting him global permissions of administrator.
+
+Lets check the existing permissions superadmin user have in Rancher and elevate him to permissions of administrator.
+
 login as "admin" user using Keycloak option and using the credentials as set during Excercise-2.
 
 Navigate to Home > Configuration > Users & Authentication > Users
@@ -62,7 +72,18 @@ Now you can see more options such as Continuous Delivery, Cluster Manager etc an
 
 
 
-Now, we will elevate the "c1admin" user to have full permissions to "rke2-cluster1" only
+
+
+## Assigning Cluster level permission to Manage individual clusters
+
+For the workshop we have pre-deployed 3 clusters in all.
+Based on Organization structure we have 3 admins and 4 developers.
+In the previous step we have elevated superadmin user to manage Rancher platform and all downstream cluster.
+Now we have to explicitly assign the rest of the 2 admins to manage their own respective cluster.
+
+In order to grant them explicit permissions to respective clusters we will need to grant user a cluster level permissions.
+
+Now, we will now grant user "c1admin", role "Cluster Owner" in order to have full control of the cluster and all its resources.
 
 Home > Explore CLUSTER > select "rke2-cluster1"
 
@@ -96,7 +117,17 @@ Now we can see rke2-cluster1 under Explore Cluster option
 
 ![rancher-server-after-integration-c1admin-login-after-role-assignment-access-view-15](../images/rancher-server-after-integration-c1admin-login-after-role-assignment-access-view-15.jpg)
 
-Please repeat above steps for elevating "c2admin" user to access cluster "rke2-cluster2" only
+
+
+![rancher-server-after-integration-c1admin-cluster-explorer-cluster-owner-17](../images/rancher-server-after-integration-c1admin-cluster-explorer-cluster-owner-17-1645457523440.jpg)
+
+Apps and Market place are only accessible to cluster owners
+
+![rancher-server-after-integration-c1admin-apps-marketplace-cluster-owner-18](../images/rancher-server-after-integration-c1admin-apps-marketplace-cluster-owner-18.jpg)
+
+We have successfully assigned user "c1admin" to manage cluster "rke2-cluster1"
+
+Similarly you can repeat the above steps for user "c2admin" for cluster "rke2-cluster2".
 
 
 
