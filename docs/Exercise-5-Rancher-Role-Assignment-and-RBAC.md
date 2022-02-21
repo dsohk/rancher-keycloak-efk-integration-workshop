@@ -129,97 +129,143 @@ We have successfully assigned user "c1admin" to manage cluster "rke2-cluster1"
 
 Similarly you can repeat the above steps for user "c2admin" for cluster "rke2-cluster2".
 
+So for we have configured role and permissions for cluster administrators, in this step we will have developers access to their respective namespaces in their assigned cluster for them to do their development work. 
+
+## Manage Project/Namespaces
+
+In the development team we have mix of senior and junior developers. The senior developers because of their role and experience are granted rights to create projects and namespaces. Junior developers are restricted to create namespaces only for their own development work.
+
+Till now we have used default built-in roles and permissions, lets explore ways to create custom roles and permissions to meet very specific needs.
+
+dev1 user will be assigned as built-in cluster member role as well as a custom role to create and manage projects and namespsaces.
+
+dev2 user will be assigned custom role only to create and manage namspaces in existing projects.
+
+dev2 user is not allowed to create any new projects.
 
 
 
+### Create Custom Project Role
+
+Login as "superadmin" 
+
+Home >  Users & Authentication > Roles > Project/Namespaces > Create Prpject /Namesapces Role
+
+![30-rancher-server-after-integration-custom-role-creation-31](../images/30-rancher-server-after-integration-custom-role-creation-31.jpg)
+
+
+
+Name = "custom-project-role1"
+
+Under Grant Resources > Verbs > add below
+
+create
+
+delete
+
+get
+
+list
+
+patch
+
+update
+
+watch
+
+Resource = "Namespaces" (from dropdown)
 
 ![17-rancher-server-after-integration-custom-project-role-creation-17](../images/17-rancher-server-after-integration-custom-project-role-creation-17.jpg)
 
 
 
+In the previous step we have created custom project/namespace role.It cannot be assigned to users directly. They have to be first associated to custom cluster role and thereafter to the user. 
 
+Next step is to create, custom cluster role
 
-![18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18](../images/18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18.jpg)
-
-
-
-
-
+Home >  Users & Authentication > Roles > Cluster > Create Cluster Role
 
 
 
+![30-rancher-server-after-integration-custom-cluster-role-creation-32](../images/30-rancher-server-after-integration-custom-cluster-role-creation-32.jpg)
 
+Name = "custom-cluster-role1"
 
+Under Inherit From tab> select custom-project-role "custom-project-role1"
 
 ![19-rancher-server-after-integration-custom-cluster-role-creation-19](../images/19-rancher-server-after-integration-custom-cluster-role-creation-19.jpg)
 
 
 
+Keep default options under Grant Resources and hit create
 
+![18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18](../images/18-rancher-server-after-integration-custom-cluster-role-creation-grant-resources-18.jpg)
+
+
+
+Login as "c1admin"
+
+Home> Explore Cluster > rke2-cluster1 > RBAC > Cluster Members > Click Add
+
+Under Select Members dropdown option, select user "dev1"
+
+Under Cluster Permissions > select "Member"  and click on Create 
 
 ![20-rancher-server-after-integration-dev1-user-member-role-assign-20](../images/20-rancher-server-after-integration-dev1-user-member-role-assign-20.jpg)
 
-
+To add and manage namespace explicitly the way we wanted using the custom role, we will now assign cluster permissions "custom-cluster-role1" and click create
 
 ![21-rancher-server-after-integration-dev1-user-custom-role-assign-21](../images/21-rancher-server-after-integration-dev1-user-custom-role-assign-21.jpg)
 
+login as dev1 user 
+
+![25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25](../images/25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25.jpg)
+
+You can notice dev1 user has both create Project and create Namespace option
+
+![26-rancher-server-after-integration-dev1-user-create-project-26](../images/26-rancher-server-after-integration-dev1-user-create-project-26.jpg)
+
+Create new project
+
+Home > Explore Cluster > rke2-cluster1> Projects/Namesapces > Create Project
+
+Name = dev1-user-project1
+
+![27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27](../images/27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27.jpg)
+
+Setting resource limits
+
+![28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28](../images/28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28.jpg)
+
+Under project > "dev1-user-project1" > Create Namespace
+
+![29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29](../images/29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29.jpg)
 
 
 
+Login as "c1admin"
+
+Home> Explore Cluster > rke2-cluster1 > RBAC > Cluster Members > Click Add
+
+Under Select Members dropdown option, select user "dev2"
+
+Under Cluster Permissions > select "custom-cluster-role1"  and click on Create 
+
+Here, We have granted him custom cluster role only
 
 ![22-rancher-server-after-integration-dev2-user-custom-role-assign-22](../images/22-rancher-server-after-integration-dev2-user-custom-role-assign-22.jpg)
 
-
+Since we need to give him access to view project level view, so we assign built-in  additional custom role "view all projects" and click create
 
 ![23-rancher-server-after-integration-dev2-user-custom-role-assign-view-all-projects-23](../images/23-rancher-server-after-integration-dev2-user-custom-role-assign-view-all-projects-23.jpg)
 
 
 
-
-
-
+Finally we have assigned all built-in and custom roles for users "dev1" and "dev2"
 
 ![24-rancher-server-after-integration-all-users-role-assignment-24](../images/24-rancher-server-after-integration-all-users-role-assignment-24.jpg)
 
-
-
-
-
-![25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25](../images/25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25.jpg)
-
-
-
-![26-rancher-server-after-integration-dev1-user-create-project-26](../images/26-rancher-server-after-integration-dev1-user-create-project-26.jpg)
-
-
-
-
-
-![27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27](../images/27-rancher-server-after-integration-dev1-user--after-role-assignment-create-project-27.jpg)
-
-
-
-
-
-
-
-
-
-
-
-![28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28](../images/28-rancher-server-after-integration-dev1-user--after-role-assignmet-project-container-default-resource-limit-28.jpg)
-
-
-
-
-
-
-
-
-
-![29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29](../images/29-rancher-server-after-integration-dev1-user--after-role-assignmet-test-project-created-29.jpg)
-
-
+logged in as dev2 user and you should now be able to create Namespace only
 
 ![30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30](../images/30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30.jpg)
 
