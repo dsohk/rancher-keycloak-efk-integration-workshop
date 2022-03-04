@@ -10,7 +10,7 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 
 
-## Integrate Rancher with Keycloak
+## Rancher side configuration for Keycloak
 
 
 
@@ -70,7 +70,7 @@ Once you are authenticated successfully, your Keycloak OIDC will tune to active 
 
 
 
-![rancher-server-user-authentication-auth-provider-complete-settings-click-enable-click-save-6](../images/rancher-server-user-authentication-auth-provider-complete-settings-click-enable-click-save-6.jpg)
+![Rancher-configureation-for-keycloak-after-enable-2](../images/Rancher-configureation-for-keycloak-after-enable-2-1646376019275.jpg)
 
 
 
@@ -78,23 +78,7 @@ Once you are authenticated successfully, your Keycloak OIDC will tune to active 
 
 
 
-
-
-
-
-![rancher-server-user-authentication-auth-provider-complete-settings-click-enable-click-saved-page-7](../images/rancher-server-user-authentication-auth-provider-complete-settings-click-enable-click-saved-page-7.jpg)
-
-
-
-
-
-
-
-
-
-![rancher-server-user-authentication-auth-provider-complete-settings-rancher-admin-logout-8](../images/rancher-server-user-authentication-auth-provider-complete-settings-rancher-admin-logout-8.jpg)
-
-
+![Rancher-configureation-for-keycloak-after-enable-3](../images/Rancher-configureation-for-keycloak-after-enable-3.jpg)
 
 
 

@@ -10,7 +10,7 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 
 
-## Configure Keycloak
+## Configuring Keycloak
 
 
 
