@@ -1,3 +1,5 @@
+
+
 # EFK stack integration with Rancher
 
 
@@ -11,8 +13,6 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 
 ## Rancher Logging using EFK Stack
-
-By now we know that the Keycloak users have very little access to the Rancher platform
 
 
 
@@ -112,13 +112,32 @@ Now lets verify the if Kibana service dashboard is up and running, view the kiba
 
 ![Rancher-logging-configuration-cluster-output-13](../images/Rancher-logging-configuration-cluster-output-13.jpg)
 
+Copy the below lines under spec: section, as depicted in the image below
 
 
 
+```
+    ssl_verify: false
+    ssl_version: TLSv1_2
+```
 
 ![Rancher-logging-configuration-cluster-output-14](../images/Rancher-logging-configuration-cluster-output-14.jpg)
 
+Copy the below lines under spec: section, as depicted in the image below
+
+```
+    include_timestamp: true
+    buffer:
+      timekey: 1m
+      timekey_wait: 30s
+      timekey_use_utc: true
+```
+
+
+
 ![Rancher-logging-configuration-cluster-output-15](../images/Rancher-logging-configuration-cluster-output-15.jpg)
+
+
 
 ![Rancher-logging-configuration-cluster-output-16](../images/Rancher-logging-configuration-cluster-output-16.jpg)
 
@@ -128,45 +147,75 @@ Now lets verify the if Kibana service dashboard is up and running, view the kiba
 
 
 
+![Rancher-logging-configuration-app-deployment-0](../images/Rancher-logging-configuration-app-deployment-0.jpg)
+
+
+
+![Rancher-logging-configuration-app-deployment-17](../images/Rancher-logging-configuration-app-deployment-17.jpg)
 
 
 
 
 
+![Rancher-logging-configuration-app-deployment-18](../images/Rancher-logging-configuration-app-deployment-18.jpg)
 
 
 
 
 
+![Rancher-logging-configuration-app-deployment-19](../images/Rancher-logging-configuration-app-deployment-19.jpg)
 
 
 
 
 
+![Rancher-logging-configuration-app-deployment-20](../images/Rancher-logging-configuration-app-deployment-20.jpg)
 
 
 
 
 
+![Rancher-logging-configuration-app-deployment-21](../images/Rancher-logging-configuration-app-deployment-21.jpg)
+
+
+
+![Rancher-logging-configuration-app-deployment-22](../images/Rancher-logging-configuration-app-deployment-22.jpg)
+
+
+
+![Rancher-logging-configuration-app-deployment-23](../images/Rancher-logging-configuration-app-deployment-23.jpg)
+
+
+
+![Rancher-logging-configuration-app-deployment-24](../images/Rancher-logging-configuration-app-deployment-24.jpg)
+
+
+
+![Rancher-logging-configuration-app-deployment-25](../images/Rancher-logging-configuration-app-deployment-25.jpg)
+
+
+
+Copy the below lines under spec: section, as depicted in the image below
+
+```
+  filters:
+    - tag_normaliser: {}
+    - parser:
+        remove_key_name_field: true
+        reserve_data: true
+        parse:
+          type: nginx
+  match:
+     - select:
+         labels:
+           app.kubernetes.io/name: log-generator
+```
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Rancher-logging-configuration-app-deployment-26](../images/Rancher-logging-configuration-app-deployment-26.jpg)
 
 
 
