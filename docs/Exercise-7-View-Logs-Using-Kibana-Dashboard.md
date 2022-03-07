@@ -14,7 +14,7 @@ The credentails for accessing above environemnt has been emailed to you on your 
 
 ## View Logs using Kibana Dashboard
 
-
+Connecting
 
 
 
