@@ -1,113 +1,101 @@
-# Keycloak integration with Rancher
+# Keycloak Integration with Rancher
+
+In this **Exercise-3**, we will Integrate Rancher with Keycloak
 
 
 
-As a part the workshop we have deployed SUSE Rancher Server, Keycloak and EFK Stack for you.
+## Configuring Keycloak (OIDC) in Rancher UI
 
-The credentails for accessing above environemnt has been emailed to you on your registered email address which you have provided during workshop reistration.
+Open **lab-credentials** file 
 
+Look for keyword **"keycloak_url"**
 
+Copy Keycloak URL link and paste the URL in **Keycloak URL** field in **Rancher UI** as shown below
 
+Keycloak URL = **"keycloak_url"**
 
-
-## Rancher side configuration for Keycloak
-
-
-
-Copy Keycloak URL from Keycloak browser window as below
-
-https://Keycloak.IP.sslip.io    <<<<<<<< This sample URL
-
-Switch to Rancher UI to configure Keycloak (OIDC) 
+Switch to **Rancher UI** and navigate below path
 
 Home > Configuration > Users and Authentication > Auth Provider > Keycloak (OIDC)
 
-Under Endpoints > Keycloak URL, paste the Keycloak URL (copied earlier)
+Under **Endpoints** 
 
-Keycloak Realm = "rancher"
+Keycloak URL =  **Keycloak URL** (copied earlier, Please note there should "NOT" be any forward **"/"** ending the URL )
 
-Client ID = "rancher"
+Correct Sample URL =  https://keycloak.IP.sslip.io
 
+Incorrect Sample URL = https://keycloak.IP.sslip.io/   **<<< "Invalid URL"**
 
+Keycloak Realm = **rancher**
 
-![rancher-server-auth-provider-keycloak-oidc-update-keycloak-url-1](../images/rancher-server-auth-provider-keycloak-oidc-update-keycloak-url-1.jpg)
+Client ID = **rancher**
 
+![Rancher-UI-Keycloak-form-update-1](../images/Rancher-UI-Keycloak-form-update-1.jpg)
 
+Now update Keycloak **Private Key** and **Certificate** fields by refering below files
 
-The Keycloak Client Certificate and Private key has been shared over an email used during registration of this workshop, open them with notepad editor of your choice and copy & paste in the relevant section below.
+The credentials for accessing Lab environment has been shared as web URL link with you. 
 
+The Keycloak Client Certificate and Private key has been shared as web URL link with you.
 
+Open Keycloak.crt file copy the entire content and past in Certificate field.
+
+Open Keycloak.pem file copy the entire content and past in Private Key field.
 
 ![rancher-server-copy-keycloak-ssl-certificate-2](../images/rancher-server-copy-keycloak-ssl-certificate-2.jpg)
 
-
-
-
-
 ![rancher-server-copy-keycloak-ssl-private-key-3](../images/rancher-server-copy-keycloak-ssl-private-key-3.jpg)
 
-
-
-Paste them in their respective sections as below.
-
-Click on Enable to save the configurations
+Click on **Enable** to apply the configuration
 
 ![rancher-server-user-authentication-auth-provider-complete-settings-click-enable-4](../images/rancher-server-user-authentication-auth-provider-complete-settings-click-enable-4.jpg)
 
+After clicking on **Enable**, you are prompted with a new window redirected to Keycloak UI for authentication
 
+Username = admin
 
-
-
-Once you Enable, you are prompted to authenticate to Keycloak for validations of the details provided
-
-
+Password = **As set by you in Exercise-2**
 
 ![rancher-server-user-authentication-auth-provider-complete-settings-click-enable-keycloak-login-5](../images/rancher-server-user-authentication-auth-provider-complete-settings-click-enable-keycloak-login-5.jpg)
 
+Once you are authenticated successfully, your Keycloak OIDC will turn to **Active** state as below
 
+Select radio button highlighted as **"Allow members of clusters and projects, plus authorized users & groups"**
 
-Once you are authenticated successfully, your Keycloak OIDC will tune to active state
-
-
+Click on **Save** button
 
 ![Rancher-configureation-for-keycloak-after-enable-2](../images/Rancher-configureation-for-keycloak-after-enable-2-1646376019275.jpg)
 
+Logout from Rancher UI and Re-login as below
 
+Now you notice new button **"Log in with Keycloak"** as been added
 
-
-
-
-
-![Rancher-configureation-for-keycloak-after-enable-3](../images/Rancher-configureation-for-keycloak-after-enable-3.jpg)
-
-
-
-
+Click on **Log in with Keycloak** button
 
 ![rancher-server-login-after-keycloak-integration-complete-9](../images/rancher-server-login-after-keycloak-integration-complete-9.jpg)
 
+After clicking on **Log in with Keycloak** button, you automatically redirected to **Keycloak UI**
 
+Username = admin
 
-
-
-
+Password = **As set by you in Exercise-2**
 
 ![rancher-server-login-after-keycloak-integration-complete-keycloak-login-10](../images/rancher-server-login-after-keycloak-integration-complete-keycloak-login-10.jpg)
 
+Navigate **Rancher UI** as below
 
+You notice that the **admin** user has full access to Rancher platform and all downstream clusters
 
-
+Click on **Users & Authentication**
 
 ![rancher-server-login-after-keycloak-integration-complete-click-users-authentication-11](../images/rancher-server-login-after-keycloak-integration-complete-click-users-authentication-11.jpg)
 
-
+You notice **Default Admin** user listed from Keycloak Provider
 
 ![rancher-server-login-after-keycloak-integration-complete-click-users-view-admin-user-settings-12](../images/rancher-server-login-after-keycloak-integration-complete-click-users-view-admin-user-settings-12.jpg)
 
 
 
+With this, we have successfully completed all required steps in **Exercise 3: Integrate Rancher with Keycloak**. 
 
-
-With this, we have successfully completed all required steps in Exercise 3. We are ready to move to the Exercise 4 [Exercise-4-Create-Keycloak-Users-Role-Mapping](./Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
-
-
+We are ready to move to the **Exercise 4: [Exercise-4-Create-Keycloak-Users-Role-Mapping](./Exercise-4-Create-Keycloak-Users-Role-Mapping.md)**

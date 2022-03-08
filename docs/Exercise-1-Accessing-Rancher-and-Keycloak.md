@@ -1,4 +1,4 @@
-# Keycloak integration with Rancher
+# Keycloak Integration with Rancher
 
 As a part the workshop we have pre-deployed SUSE Rancher Server, Keycloak and Elastic Search & Kibana for you.
 
@@ -14,6 +14,8 @@ You need to download the zip file and upon extraction you will find below 4 file
 
 
 ![Lab-Credentails-Zip-Files](../images/Lab-Credentails-Zip-Files.jpg)
+
+
 
 ## Accessing SUSE Rancher server
 
@@ -95,27 +97,16 @@ Since Keycloak is built using self-signed certificated and it's not a valid cert
 
 ![keycloak-login-security-certificate-1](../images/keycloak-login-security-certificate-1.jpg)
 
-Click on Administration Console to login into Keycloak.
+Click on **Administration Console** to login into Keycloak
 
 ![keycloak-login-click-administration-console-2](../images/keycloak-login-click-administration-console-2.jpg)
 
-
-
-
-
-Provide the Keycloak credentials
-
-
-
 ![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
-
-
-Upon successful login, you will be presented below keycloak homepage
+Upon successful login, you will be presented with Keycloak homepage
 
 ![keycloak-initial-login-dashboard-4](../images/keycloak-initial-login-dashboard-4.jpg)
 
+With this, we have successfully completed all required steps in **Exercise 1: Accessing Rancher and Keycloak**. 
 
-
-With this, we have successfully completed all required steps in Part 1. We are ready to move to the Part 2 [Exercise-2-Configure-Keycloak.md](./Exercise-2-Configure-Keycloak.md)
-
+We are ready to move to the **Exercise 2: [Exercise-2-Configure-Keycloak.md](./Exercise-2-Configure-Keycloak.md)**

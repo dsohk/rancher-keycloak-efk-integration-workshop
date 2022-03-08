@@ -1,202 +1,328 @@
 # Keycloak integration with Rancher
 
+In this **Exercise-4**, we will create Keycloak Users and Groups
 
+### **Create Keycloak Users**
 
-As a part the workshop we have deployed SUSE Rancher Server, Keycloak and EFK Stack for you.
+**admin1** 
 
-The credentails for accessing above environemnt has been emailed to you on your registered email address which you have provided during workshop reistration.
+**admin2**
+
+**dev1**
+
+**dev2**
+
+**dev3**
+
+**dev4**
+
+**superadmin**
+
+### **Create Keycloak Groups**
+
+**cluster-admin-group1**
+
+**cluster-admin-group2**
+
+**senior-dev-group**
+
+**senior-dev-group**
+
+**junior-dev-group**
+
+**junior-dev-group**
+
+**super-admin-group**
+
+### **Associate User to Group**
+
+**admin1 ---> cluster-admin-group1**
+
+**admin2 ---> cluster-admin-group2**
+
+**dev1   ----> senior-dev-group**
+
+**dev2   ----> senior-dev-group**
+
+**dev3   ----> junior-dev-group**
+
+**dev4   ----> junior-dev-group**
+
+**superadmin ---> super-admin-group**
 
 
 
 ## Create Keycloak Users and Groups
 
-Configure users in Keycloak along with view/list access to other keycloak users and groups.
+Login to **Keycloak UI**
 
-To access Keycloak, revisit our email shared which has the URL and credentials for accessing Keycloak server.  You can use your favorite browser and credential provided to Login in Keycloak. 
+Open lab-credentials file 
 
-Since Keycloak is built using self-signed certificated and it's not a valid certificate from authorized CA, your browser will give warning. You can safely click on the link "Proceed to Keycloak-IP.sslip.io (unsafe)" to login.
+Look for keyword **"keycloak_url"**, **"keycloak_admin_user"** and **"keycloak_admin_password"**
 
+Copy and past Keycloak URL link in your favourite browser.
 
+Keycloak URL = **"keycloak_url"**
 
-![keycloak-login-security-certificate-1](../images/keycloak-login-security-certificate-1.jpg)
+user = **admin**
 
-Click on Administration Console to login into Keycloak.
+password = **keycloak_admin_password**
 
 ![keycloak-login-click-administration-console-2](../images/keycloak-login-click-administration-console-2.jpg)
 
-
-
-Provide the Keycloak credentials
-
 ![keycloak-login-prompt-3](../images/keycloak-login-prompt-3.jpg)
 
+### **Create Keycloak Users**
 
+HOME > Manage > Users
 
-Under Realm "Rancher" > Manage > Users
-
-Click "Add user"
+Click **"Add user"**
 
 ![keycloak-after-integration-click-users-click-view-all-users-1](../images/keycloak-after-integration-click-users-click-view-all-users-1.jpg)
 
-
-
 Create / Name as below
 
-Username = superadmin
+Username = **superadmin**
 
-First Name = superadmin
+First Name = **superadmin**
 
-Last Name = admin
+Last Name = **admin**
 
 Rest all set to default settings
 
-Click on Save
+Click on **Save**
 
 ![keycloak-after-integration-user-create-superadmin-2](../images/keycloak-after-integration-user-create-superadmin-2.jpg)
 
-User creation Success
+User creation **Success** message
 
 ![keycloak-after-integration-user-create-superadmin-success-3](../images/keycloak-after-integration-user-create-superadmin-success-3.jpg)
 
-Next step is to set the user user credentials which would be used during login 
+Next step is to set the **superadmin** user password under **Credentials** tab
 
-Click "Set Password"
+Click **"Set Password"**
 
 ![keycloak-after-integration-user-create-superadmin-password-set-4](../images/keycloak-after-integration-user-create-superadmin-password-set-4.jpg)
 
-You will be re-prompted to set password again
+You will be re-prompted to **set password** again
 
 ![keycloak-after-integration-user-create-superadmin-password-set-prompt-5](../images/keycloak-after-integration-user-create-superadmin-password-set-prompt-5.jpg)
 
-Now your user credentials are successfully set
+Now your user Set Password **Success** message
 
 ![keycloak-after-integration-user-create-superadmin-password-set-success-6](../images/keycloak-after-integration-user-create-superadmin-password-set-success-6.jpg)
 
-Repeat the above steps of adding new user "admin1" and setting his credentials
+Repeat the above steps for adding new user **"admin1"** and set login credentials under Credentials tab
 
+Create / Name as below
 
+Username = **admin1**
+
+First Name = **admin1**
+
+Last Name = **admin**
+
+Rest all set to default settings
+
+Click on **Save**
 
 ![Keycloak-user-admin1-4](../images/Keycloak-user-admin1-4.jpg)
 
+Repeat above steps of **user creation** and **setting credentials** for following users
 
+**admin1** 
 
+**admin2**
 
+**dev1**
 
-Finally check all required users are created as below
+**dev2**
 
+**dev3**
 
+**dev4**
+
+**superadmin**
+
+Finally check all required users are created as below and set with login credentials
 
 ![Keycloak-all-users-5](../images/Keycloak-all-users-5-1646377041936.jpg)
 
-Modify each user role mappings by clicking Actions "Edit"
+Now modify Role Mappings for each user by clicking on "**Edit**" 
 
-<<<<<<<<< highlight the Edit button
+Click on **Edit** for **admin1** user
 
 ![Keycloak-all-users-5](../images/Keycloak-all-users-5-1646382569208.jpg)
 
-With Edit option you will be presented the tabs as below, select "Role Mappings"
+Select **"Role Mappings"** tab
 
-Under Client Roles > select "realm-management" (dropdown)
+Click on **Client Roles** (dropdown) and select **"realm-management"**
 
 ![keycloak-admin1-realm-mangement-role-mapping-6](../images/keycloak-admin1-realm-mangement-role-mapping-6.jpg)
 
-Under Available Roles, select view-users and click on Add selected
-
-
+Under **Available Roles**, select **view-users** option and click on **Add selected**
 
 ![keycloak-admin1-realm-mangement-role-mapping-7](../images/keycloak-admin1-realm-mangement-role-mapping-7.jpg)
 
-We have successfully assigned the roles "view-users"
+**"view-users"** roles assigned successfully
 
-You can now see them under the Effective Roles section
-
-
+You can notice them under the **Effective Roles** section
 
 ![keycloak-admin1-realm-mangement-role-mapping-8](../images/keycloak-admin1-realm-mangement-role-mapping-8.jpg)
 
+You need to repeat the above steps of **Role Assignments**  "view-users" for all the **Keycloak users** as below
+
+**admin1** 
+
+**admin2**
+
+**dev1**
+
+**dev2**
+
+**dev3**
+
+**dev4**
+
+**superadmin**
 
 
-You need to repeat the above steps for Role Assignments  "view-users" for all the Keycloak users we created
 
+### **Create Keycloak Groups**
 
+Now **Create Groups**
 
-Now Create Groups
+Home > Manage > Groups
+
+Click **New**
+
+Name = **cluster-admin-group1**
 
 ![keycloak-create-group-cluster-admin-group1-9](../images/keycloak-create-group-cluster-admin-group1-9.jpg)
 
-
+Group created **Success** messages
 
 ![keycloak-create-group-cluster-admin-group1-10](../images/keycloak-create-group-cluster-admin-group1-10.jpg)
 
-
-
-
+Click on **Role Mappings** tab and add **Available Roles** as below
 
 ![keycloak-create-group-cluster-admin-group1-11](../images/keycloak-create-group-cluster-admin-group1-11.jpg)
 
-
+Select **Available Roles** and click on **Add selected**
 
 ![keycloak-create-group-cluster-admin-group1-12](../images/keycloak-create-group-cluster-admin-group1-12.jpg)
 
-
+Add selected **Success** message
 
 ![keycloak-create-group-cluster-admin-group1-13](../images/keycloak-create-group-cluster-admin-group1-13.jpg)
 
+Repeat above steps for all **Groups** as listed below
 
+**cluster-admin-group1**
 
-Now add user "admin1" to group "cluster-admin-group1"
+**cluster-admin-group2**
 
-![keycloak-create-group-cluster-admin-group1-add-user-admin1-14](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-14.jpg)
+**senior-dev-group**
 
+**senior-dev-group**
 
+**junior-dev-group**
 
-![keycloak-create-group-cluster-admin-group1-add-user-admin1-15](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-15.jpg)
+**junior-dev-group**
 
+**super-admin-group**
 
-
-
-
-![keycloak-create-group-cluster-admin-group1-add-user-admin1-16](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-16.jpg)
-
-
-
-![keycloak-create-group-cluster-admin-group1-add-user-admin1-17](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-17.jpg)
-
-
+Finally verify all **Groups** are created as below
 
 ![keycloak-create-group-cluster-admin-group1-add-user-admin1-18](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-18.jpg)
 
 
 
+### **Associate User to Group**
+
+**admin1 ---> cluster-admin-group1**
+
+**admin2 ---> cluster-admin-group2**
+
+**dev1   ----> senior-dev-group**
+
+**dev2   ----> senior-dev-group**
+
+**dev3   ----> junior-dev-group**
+
+**dev4   ----> junior-dev-group**
+
+**superadmin ---> super-admin-group**
+
+Now add user "**admin1**" to group "**cluster-admin-group1**"
+
+![keycloak-create-group-cluster-admin-group1-add-user-admin1-14](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-14.jpg)
+
+Home > Manage > Users
+
+Select **admin1** user and click on **Edit**
+
+![keycloak-create-group-cluster-admin-group1-add-user-admin1-15](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-15.jpg)
+
+Click on **Groups** Tab
+
+![keycloak-create-group-cluster-admin-group1-add-user-admin1-16](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-16.jpg)
+
+Select **cluster-admin-group1** from **Available Groups** and click on **Join**
+
+![keycloak-create-group-cluster-admin-group1-add-user-admin1-17](../images/keycloak-create-group-cluster-admin-group1-add-user-admin1-17.jpg)
+
+
+
 Now repeat above steps of adding users to respective groups as below.
 
-admin1 ---> cluster-admin-group1
+**admin1 ---> cluster-admin-group1**
 
-admin2 ---> cluster-admin-group2
+**admin2 ---> cluster-admin-group2**
 
-dev1   ----> senior-dev-group
+**dev1   ----> senior-dev-group**
 
-dev2   ----> senior-dev-group
+**dev2   ----> senior-dev-group**
 
-dev3   ----> junior-dev-group
+**dev3   ----> junior-dev-group**
 
-dev4   ----> junior-dev-group
+**dev4   ----> junior-dev-group**
 
-superadmin ---> super-admin-group
+**superadmin ---> super-admin-group**
 
 
 
-Now assign admin user to all groups
+Now assign **admin** user to all **groups**
+
+Home > Manage > Users
+
+Select **admin** user and click on **Edit**
+
+Click on **Groups** Tab 
+
+Click on **Join** on all groups from **Available Groups**
+
+Ensure all **Groups** are listed under **Group Membership **as below
 
 ![keycloak-assign-admin-user-to-all-groups-19](../images/keycloak-assign-admin-user-to-all-groups-19.jpg)
 
 
 
+Now, Switch to Rancher UI interface and add all **keycloak groups** as shown below
 
+**cluster-admin-group1**
 
+**cluster-admin-group2**
 
+**senior-dev-group**
 
-Switch to Rancher UI interface and add all keycloak groups as shown below
+**senior-dev-group**
+
+**junior-dev-group**
+
+**junior-dev-group**
+
+**super-admin-group**
 
 ![Rancher-configureation-for-keycloak-after-enable-4](../images/Rancher-configureation-for-keycloak-after-enable-4.jpg)
 
@@ -204,13 +330,9 @@ Switch to Rancher UI interface and add all keycloak groups as shown below
 
 ![Rancher-configureation-for-keycloak-after-enable-5](../images/Rancher-configureation-for-keycloak-after-enable-5.jpg)
 
-
-
-
+Click on **Save** Button
 
 ![Rancher-configureation-for-keycloak-after-enable-6](../images/Rancher-configureation-for-keycloak-after-enable-6.jpg)
-
-
 
 
 
@@ -239,58 +361,44 @@ Since we need to check authentication of newly created Keycloak users, we will u
 
 
 
-On clicking with "log in with Keycloak" you would automatically routed to Keycloak URL and you will presented with Keycloak login page
+On clicking with "**log in with Keycloak**" you would automatically routed to **Keycloak URL** and you will presented with **Keycloak login page**
 
-In the below example we are loggin with "superadmin" user and credentials 
+In the below example we are login with "**superadmin"** user and credentials 
 
 ![rancher-server-after-integration-initial-login-all-users-superadmin-17](../images/rancher-server-after-integration-initial-login-all-users-superadmin-17.jpg)
 
-You will be prompted to password reset
+You will be prompted to **password reset**
 
 ![rancher-server-after-integration-initial-login-all-users-superadmin-password-reset-18](../images/rancher-server-after-integration-initial-login-all-users-superadmin-password-reset-18.jpg)
 
-Upon successful login you will be routed to Rancher UI
-
-<<<<<<< highlight the below image
+Upon successful login you will be re-routed back to **Rancher UI**
 
 ![rancher-server-after-integration-initial-login-superadmin-limited-access-view-19](../images/rancher-server-after-integration-initial-login-superadmin-limited-access-view-19.jpg)
 
-If you notice on exploring the UI you will not find lot of Rancher features and existing downstream clusters which is typically visible to Rancher Admin
+If you notice on exploring the UI you will not find lot of Rancher features and any downstream clusters which is typically visible to Rancher Admin
 
 Log out from this session.
 
 Login with rest of the users created in Keycloak by following above steps
 
-superadmin, admin1, admin2, dev1, dev2, dev3, dev4
-
-![rancher-server-after-integration-initial-login-superadmin-limited-access-view-part-20](../images/rancher-server-after-integration-initial-login-superadmin-limited-access-view-part-20.jpg)
+**admin1, admin2, dev1, dev2, dev3, dev4, superadmin**
 
 
 
-Now we have successfully logged in with all the above Keycloak users
+Now we have successfully logged in with all the above **Keycloak users**
 
-The next step is to verify all the Keycloak users are reflected in its local database
+The next step is to verify all the **Keycloak users** are reflected in its local database
 
-For this we need to login as "admin" user using Keycloak option and using the credentials as set during Excercise-2.
-
-
+For this we need to login as "**admin**" user using **Log in with Keycloak** option and using the credentials as set in the above steps
 
 ![rancher-server-after-integration-rancher-admin-login-screen-21](../images/rancher-server-after-integration-rancher-admin-login-screen-21.jpg)
 
-
-
 Navigate to Home > Configuration > Users & Authentication > Users
 
-Now you can see all Keycloak user are listed with provider "Keycloak" in Rancher local database.
-
-
+Now you can see all **Keycloak users** are listed with provider **"Keycloak"** in Rancher.
 
 ![Rancher-after-configuration-list-all-users-8](../images/Rancher-after-configuration-list-all-users-8.jpg)
 
+With this, we have successfully completed all required steps in **Exercise 4: Create Keycloak User and Groups**. 
 
-
-With this, we have successfully completed all required steps in Exercise 4. We are ready to move to the Exercise 5 [Exercise 5 - Rancher Roles & Assignment](./Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
-
-
-
-
+We are ready to move to the **Exercise 5: [Exercise 5 - Rancher Roles & Assignment](./Exercise-5-Rancher-Role-Assignment-and-RBAC.md)**
