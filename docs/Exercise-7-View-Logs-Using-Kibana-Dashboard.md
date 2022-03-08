@@ -1,16 +1,22 @@
-
-
-# Rancher Logging using EFK Stack
-
-
-
 ## View Logs using Kibana Dashboard
 
-Open Kibana Dashboard 
+### Connecting to Kibana Dashboard
 
-Kibana > Stack Management > Kibana > Index Patterns
+![Kibana-initial-screen-shot1](../images/Kibana-initial-screen-shot1.jpg)
+
+login = elastic
+
+Password = < Refer to Lab-Credentials .JSON file>
+
+![Kibana-initial-screen-shot3](../images/Kibana-initial-screen-shot3.jpg)
+
+Navigate below path for creating Index Pattern
+
+Home> Management >  Stack Management > Kibana > Index Patterns
 
 ![Kibana-index-pattern-creation-27](../images/Kibana-index-pattern-creation-27.jpg)
+
+Create Index Pattern
 
 Name = fluentd
 
@@ -20,40 +26,33 @@ Click on **'Create Index Pattern'**
 
 ![Kibana-index-pattern-creation-28](../images/Kibana-index-pattern-creation-28.jpg)
 
-Analytics > Discover > Available fields > Select field
+To view the logs, navigate the below path 
 
-1. Kubernetes.pod_name
-2. Agents
+Home > Analytics > Discover
 
 ![Kibana-index-pattern-creation-29](../images/Kibana-index-pattern-creation-29.jpg)
 
-
-
 ![Kibana-index-pattern-creation-30](../images/Kibana-index-pattern-creation-30.jpg)
 
-We will see reduced data stream & logs from the pods will be visible. 
+To filter the logs further, you choose below fields
+
+Available fields > click on '+' symbol besides the field name
+
+1. Kubernetes.pod_name
+2. Agent
+
+![Kibana-index-pattern-creation-32](../images/Kibana-index-pattern-creation-32.jpg)
+
+We will see reduced data stream & logs from the pod
 
 ![Kibana-index-pattern-creation-31](../images/Kibana-index-pattern-creation-31.jpg)
 
 
 
-![Kibana-index-pattern-creation-32](../images/Kibana-index-pattern-creation-32.jpg)
+With this, we have successfully completed Rancher Logging and integration with EFK Stack.
 
+This brings us to end of the Workshop.
 
+We hope you found this technical hands-on workshop informative and helpful.
 
-
-
-
-
-
-
-
-
-
-
-With this, we have successfully completed integration of Keycloak with Rancher and successfully demonstrated Rancher Roles assignments and RBAC.
-
-In the next section we will showcase EFK stack integration with SUSE Rancher.
-
-
-
+Form SUSE Team, it was pleasure hosting this workshop.

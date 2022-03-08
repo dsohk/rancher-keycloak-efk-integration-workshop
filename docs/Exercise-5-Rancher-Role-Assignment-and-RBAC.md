@@ -271,10 +271,7 @@ logged in as dev2 user and you should now be able to create Namespace only
 
 
 
-With this, we have successfully completed integration of Keycloak with Rancher and successfully demonstrated Rancher Roles assignments and RBAC.
+With this, we have successfully completed all required steps in Exercise 5: "Rancher role assignment and RBAC". 
 
-In the next section we will showcase EFK stack integration with SUSE Rancher.
-
-
-
+We are now ready to move to the Exercise 6: [Exercise 6: Configure Rancher Logging](./Exercise-6-Configure-Rancher-Logging.md)
 

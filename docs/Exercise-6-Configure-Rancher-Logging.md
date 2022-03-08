@@ -271,9 +271,10 @@ Upon adding the parse you final flow definition would look like below.
 
 ![Rancher-logging-configuration-app-deployment-26](../images/Rancher-logging-configuration-app-deployment-26.jpg)
 
-We have successfully created the flow. 
+Logging Flow created successfully. 
 
-With this, we have successfully integrated Rancher Logging with EFK Stack. In the next section we will view the application logs generated from rke2-cluster into Elastic search.
+With this, we have successfully completed all required steps in Exercise 6: "Configure Rancher Logging". 
 
+In the next section we will view the application logs generated from rke2-cluster into Elastic search.
 
-
+We are now ready to move to the Exercise 7: [Exercise 7: View Logs using Kibana Dashboard](./Exercise-7-View-Logs-Using-Kibana-Dashboard.md)
