@@ -1,15 +1,17 @@
 # Keycloak Integration with Rancher
 
-As a part the workshop we have pre-deployed SUSE Rancher Server, Keycloak and Elastic Search & Kibana for you.
+As a part the workshop we have pre-deployed **SUSE Rancher Server, Keycloak and Elastic Search & Kibana** for you.
 
-The credentials for accessing Lab environment has been shared as web url link with you. 
 
-You need to download the zip file and upon extraction you will find below 4 files.
 
-1. keycloak.crt 
-2. keycloak.pem
-3. kube_config_server.yaml
-4. lab-credentials    (**This file has got all your lab URL's and login credentials for Rancher, Keycloak and Elastic Search & Kibana**)
+The credentials for accessing **Lab environment** has been shared as web URL link with you. 
+
+You need to download the zip file and upon extraction you will find below **4 files**.
+
+1. **keycloak.crt** 
+2. **keycloak.pem**
+3. **kube_config_server.yaml**
+4. **lab-credentials**    (**This file has got all your lab URL's and login credentials for Rancher, Keycloak and Elastic Search & Kibana**)
 
 
 
@@ -19,7 +21,7 @@ You need to download the zip file and upon extraction you will find below 4 file
 
 ## Accessing SUSE Rancher server
 
-Open lab-credentials file 
+Open **lab-credentials** file 
 
 Look for keyword **"rancher_server_url"**, **"rancher_server_user"** and **"rancher_server_password"** 
 
@@ -85,7 +87,7 @@ Open lab-credentials file
 
 Look for keyword **"keycloak_url"**, **"keycloak_admin_user"** and **"keycloak_admin_password"**
 
-Copy and past Keycloak URL link in your favourite browser.
+Copy and past **Keycloak URL** link in your favourite browser.
 
 Keycloak URL = **"keycloak_url"**
 
