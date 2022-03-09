@@ -26,10 +26,6 @@ In this **Exercise-4**, we will create Keycloak Users and Groups
 
 **senior-dev-group**
 
-**senior-dev-group**
-
-**junior-dev-group**
-
 **junior-dev-group**
 
 **super-admin-group**
