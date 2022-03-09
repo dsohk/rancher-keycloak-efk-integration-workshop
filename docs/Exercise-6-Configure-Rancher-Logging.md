@@ -144,6 +144,8 @@ Scheme = **https**
 
 Host = < **elastic server IP address** >  Refer lab-credentials
 
+Port = **30001**
+
 Index Name = **fluentd**
 
 Access 
