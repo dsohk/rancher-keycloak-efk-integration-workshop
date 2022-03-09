@@ -1,18 +1,26 @@
 ## Rancher Logging using EFK Stack
 
+In this **Exercise-6**, we will deploy and configure Rancher Logging and deploy sample Log Generator App.
+
+
+
 ### Connecting to Elastic Search
 
-Lets verify the if Elastic search engine is up and running, view the elastic search URL and login with "elastic" user and credentials
+Lets verify the if Elastic search engine is up and running, view the **elastic search URL** and login with "**elastic**" user and credentials
+
+Open lab-credentials file 
+
+Look for keyword **"elastic_url"**, **"elastic_user"** and **"elastic_password"** 
+
+Copy and past Elastic URL link in your favourite browser.
+
+Elastic URL = **"elastic_url"**
+
+user = **elastic**
+
+password = **"elastic_password"**
 
 ![Elastic-login-screen-shot1](../images/Elastic-login-screen-shot1.jpg)
-
-Provide login credentials
-
-User = elastic
-
-Password = < shared >
-
-
 
 ![Elastic-login-screen-shot2](../images/Elastic-login-screen-shot2.jpg)
 
@@ -26,51 +34,63 @@ The above details in the browser confirms Elastic search services are up and run
 
 Now lets verify the if Kibana service dashboard is available, view the Kibana URL
 
+Open lab-credentials file 
+
+Look for keyword **"kibana_url"**, **"elastic_user"** and **"elastic_password"** 
+
+Copy and past Kibana URL link in your favourite browser.
+
+Kibana URL = **"kibana_url"**
+
+user = **elastic**
+
+password = **"elastic_password"**
+
 ![Kibana-initial-screen-shot1](../images/Kibana-initial-screen-shot1.jpg)
-
-login = elastic
-
-Password = < Shared >
 
 ![Kibana-initial-screen-shot3](../images/Kibana-initial-screen-shot3.jpg)
 
-Click on "Explore on my own"
+Click on **"Explore on my own"**
 
 ![Kibana-initial-screen-shot4](../images/Kibana-initial-screen-shot4.jpg)
 
 Next step is to deploy Rancher logging
 
+
+
 ### Deploying Rancher Logging
 
-Home > Explore Cluster > rke2-cluster1 > App & Marketplace > Charts > Logging
+Home > Explore Cluster > rke2-cluster1 > App & Marketplace > Charts
+
+Click **Logging**
 
 ![Rancher-screen-apps-market-place-logging-1](../images/Rancher-screen-apps-market-place-logging-1.jpg)
 
-Click on Install
+Click on **Install**
 
 ![Rancher-screen-apps-market-place-logging-2](../images/Rancher-screen-apps-market-place-logging-2.jpg)
 
-Continue with default options and click on Next
+Continue with **default options** and click on **Next**
 
 ![Rancher-screen-apps-market-place-logging-3](../images/Rancher-screen-apps-market-place-logging-3.jpg)
 
-Continue with default options and click on "Install"
+Continue with **default options** and click on "**Install**"
 
 ![Rancher-screen-apps-market-place-logging-4](../images/Rancher-screen-apps-market-place-logging-4.jpg)
 
-Logging deployed successfully as depicted in the image below
+**Logging** deployed successfully as depicted in the image below
 
 ![Rancher-screen-apps-market-place-logging-5](../images/Rancher-screen-apps-market-place-logging-5.jpg)
 
-Upon successful provisioning of Rancher Logging, you will see logging option available, upon expanding you will find four options. 
+Upon successful provisioning of Rancher Logging, you will see logging option available, upon expanding you will find **four** options. 
 
-1. ClusterFlows
+1. **ClusterFlows**
 
-2. ClusterOutputs
+2. **ClusterOutputs**
 
-3. Flows
+3. **Flows**
 
-4. Outputs
+4. **Outputs**
 
 ![Rancher-screen-apps-market-place-logging-6](../images/Rancher-screen-apps-market-place-logging-6.jpg)
 
@@ -80,35 +100,39 @@ Upon successful provisioning of Rancher Logging, you will see logging option ava
 
 Prior to configuring cluster output, lets configure secrets which would be required during cluster output configuration
 
-Home > Explore Cluster > rke2-cluster1 > Storage > Secrets > Create
+Home > Explore Cluster > rke2-cluster1 > Storage > Secrets
+
+Click **Create**
 
 ![Rancher-logging-configuration-storage-secrets-7](../images/Rancher-logging-configuration-storage-secrets-7.jpg)
 
-Select "Opaque" option
+Select "**Opaque**" option
 
 ![Rancher-logging-configuration-storage-secrets-8](../images/Rancher-logging-configuration-storage-secrets-8.jpg)
 
 Use below options to populate the form
 
-Namespace = cattle-logging-system
+Namespace = **cattle-logging-system**
 
-Name = my-elastic
+Name = **my-elastic**
 
-Key = password
+Key = **password**
 
-Value = < Elastic User Password Shared >
+Value = < **elastic_password** >  Refer lab-credentails
 
 ![Rancher-logging-configuration-storage-secrets-9](../images/Rancher-logging-configuration-storage-secrets-9.jpg)
 
 #### Configure Cluster Outputs
 
-Home > Explore Cluster > rke2-cluster1 > Logging > ClusterOutputs > Create
+Home > Explore Cluster > rke2-cluster1 > Logging > ClusterOutputs
+
+Click **Create**
 
 ![Rancher-logging-configuration-cluster-output-10](../images/Rancher-logging-configuration-cluster-output-10.jpg)
 
 Select from dropdown
 
-Output = Elasticsearch
+Output = **Elasticsearch**
 
 ![Rancher-logging-configuration-cluster-output-11](../images/Rancher-logging-configuration-cluster-output-11.jpg)
 
@@ -116,25 +140,25 @@ Output = Elasticsearch
 
 Target
 
-Scheme = https
+Scheme = **https**
 
-Host = < elastic server IP address >
+Host = < **elastic server IP address** >  Refer lab-credentials
 
-Index Name = fluentd
+Index Name = **fluentd**
 
 Access 
 
-User = elastic
+User = **elastic**
 
-Secret Key from Secret = my-elastic (from the dropdown)
+Secret Key from Secret = **my-elastic** (from the dropdown)
 
-key = password  (from the dropdown)
+key = **password**  (from the dropdown)
 
-Click on Create
+Click on **Create**
 
 ![Rancher-logging-configuration-cluster-output-12](../images/Rancher-logging-configuration-cluster-output-12.jpg)
 
-Hit 3 vertical dots to Edit YAML
+Hit 3 vertical dots to **Edit YAML**
 
 ![Rancher-logging-configuration-cluster-output-13](../images/Rancher-logging-configuration-cluster-output-13.jpg)
 
@@ -165,23 +189,25 @@ Final ClusterOutputs should look as below
 
 ![Rancher-logging-configuration-cluster-output-16](../images/Rancher-logging-configuration-cluster-output-16.jpg)
 
-We have configured the cluster level output for rke2-cluster1 to Elastic Search
+We have configured the cluster level output for **rke2-cluster1** to Elastic Search
 
 #### Deploy Sample App - Log Generator
 
 Now we will deploy sample application which will generate continuous logs and we will forward these logs to Elastic Search
 
-Home > Explore Cluster > rke2-cluster1 >Workload > Deployments > Create
+Home > Explore Cluster > rke2-cluster1 >Workload > Deployments
+
+Click **Create**
 
 ![Rancher-logging-configuration-app-deployment-0](../images/Rancher-logging-configuration-app-deployment-0.jpg)
 
-Click on Icon with up arrow key "Import YAML"
+Click on Icon with up arrow key **"Import YAML"**
 
 ![Rancher-logging-configuration-app-deployment-17](../images/Rancher-logging-configuration-app-deployment-17.jpg)
 
 
 
-Copy the below yaml definition code into the pop up window and click on import
+Copy the below yaml definition code into the pop up window and click on **import**
 
 ```
 apiVersion: apps/v1
@@ -207,17 +233,17 @@ spec:
 
 ![Rancher-logging-configuration-app-deployment-18](../images/Rancher-logging-configuration-app-deployment-18.jpg)
 
+This will create the deployment name "**Log-generator**". Its a simple deployment with 1 replicas for the log generator pod which will generate logs. 
 
-
-This will create the deployment name "Log-generator". Its a simple deployment with 1 replicas for the log generator pod which will generate logs. 
+Click **Close**
 
 ![Rancher-logging-configuration-app-deployment-19](../images/Rancher-logging-configuration-app-deployment-19.jpg)
 
-We can see our Deployment "Log generator" is not active & up & working with (1/1) pod & 1 pod is available. 
+We can see our Deployments "**Log generator**" is **Active** & up & working with (1/1) pod & 1 pod is available. 
 
 ![Rancher-logging-configuration-app-deployment-20](../images/Rancher-logging-configuration-app-deployment-20.jpg)
 
-To view the logs, click on the 3 vertical dots & click on 'View Logs'
+To view the logs, click on the 3 vertical dots & click on '**View Logs**'
 
 ![Rancher-logging-configuration-app-deployment-21](../images/Rancher-logging-configuration-app-deployment-21.jpg)
 
@@ -225,29 +251,35 @@ Below are the logs generated by the pod.
 
 ![Rancher-logging-configuration-app-deployment-22](../images/Rancher-logging-configuration-app-deployment-22.jpg)
 
+
+
 #### Configure Flows
 
 Final step is to configure Flow.
 
-Home > Explore Cluster > rke2-cluster1 > Logging > Flows
+Home > Explore Cluster > rke2-cluster1 > Logging 
 
-Namespace = default
+Click **Flows**
 
-Name = my-app-log
+Namespace = **default**
 
-In the Matches Form, you can specify Pods by giving Pod Labels, Nodes by specifying which nodes you would like to collect logs. You can also limit logs from specific containers. 
+Name = **my-app-log**
+
+In the Matches Form, you can specify Pods by giving Pod Labels, Nodes by specifying which nodes you would like to collect logs. 
+
+You can also limit logs from specific containers. 
 
 In our case we will leave it as default. 
 
 ![Rancher-logging-configuration-app-deployment-23](../images/Rancher-logging-configuration-app-deployment-23.jpg)
 
-In the Output form, click on the drop down to select the Cluster Output we created "my-elastic"
+In the Output form, click on the drop down to select the Cluster Output we created "**my-elastic**"
 
-Cluster Output = my-elastic
+Cluster Output = **my-elastic**
 
 ![Rancher-logging-configuration-app-deployment-24](../images/Rancher-logging-configuration-app-deployment-24.jpg)
 
-Click on 'Create'. 
+Click on '**Create**'
 
 ![Rancher-logging-configuration-app-deployment-25](../images/Rancher-logging-configuration-app-deployment-25.jpg)
 
@@ -268,6 +300,8 @@ Click on the 3 vertical got to edit the YAML definition for the flow to include 
 ```
 
 Upon adding the parse you final flow definition would look like below. 
+
+Click **Save**
 
 ![Rancher-logging-configuration-app-deployment-26](../images/Rancher-logging-configuration-app-deployment-26.jpg)
 

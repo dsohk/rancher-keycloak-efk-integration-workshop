@@ -1,12 +1,22 @@
 ## View Logs using Kibana Dashboard
 
+In this **Exercise-7**, we will view the logs using Kibana dashboard.
+
+
+
 ### Connecting to Kibana Dashboard
 
-![Kibana-initial-screen-shot1](../images/Kibana-initial-screen-shot1.jpg)
+Open lab-credentials file 
 
-login = elastic
+Look for keyword **"kibana_url"**, **"elastic_user"** and **"elastic_password"** 
 
-Password = < Refer to Lab-Credentials .JSON file>
+Copy and past Kibana URL link in your favourite browser.
+
+Kibana URL = **"kibana_url"**
+
+user = **elastic**
+
+password = **"elastic_password"**
 
 ![Kibana-initial-screen-shot3](../images/Kibana-initial-screen-shot3.jpg)
 
@@ -16,11 +26,11 @@ Home> Management >  Stack Management > Kibana > Index Patterns
 
 ![Kibana-index-pattern-creation-27](../images/Kibana-index-pattern-creation-27.jpg)
 
-Create Index Pattern
+Create **Index Pattern**
 
-Name = fluentd
+Name = **fluentd**
 
-Timestap field = @timestamp
+Timestap field = **@timestamp**
 
 Click on **'Create Index Pattern'**
 
@@ -28,7 +38,9 @@ Click on **'Create Index Pattern'**
 
 To view the logs, navigate the below path 
 
-Home > Analytics > Discover
+Home > Analytics
+
+Click **Discover**
 
 ![Kibana-index-pattern-creation-29](../images/Kibana-index-pattern-creation-29.jpg)
 
@@ -36,10 +48,10 @@ Home > Analytics > Discover
 
 To filter the logs further, you choose below fields
 
-Available fields > click on '+' symbol besides the field name
+Available fields > click on **'+'** symbol besides the field name
 
-1. Kubernetes.pod_name
-2. Agent
+1. **Kubernetes.pod_name**
+2. **Agent**
 
 ![Kibana-index-pattern-creation-32](../images/Kibana-index-pattern-creation-32.jpg)
 
@@ -49,7 +61,7 @@ We will see reduced data stream & logs from the pod
 
 
 
-With this, we have successfully completed Rancher Logging and integration with EFK Stack.
+With this, we have successfully completed **Rancher Logging and integration with EFK Stack**.
 
 This brings us to end of the Workshop.
 

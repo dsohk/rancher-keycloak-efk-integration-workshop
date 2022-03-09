@@ -12,13 +12,13 @@ By now we know that the Keycloak users have very little access to the Rancher pl
 
 For the users to perform the tasks they would need adequate permissions
 
-Rancher Roles are classified into 3 levels
+Rancher Roles are classified into **3 levels**
 
-Global Level Roles
+**Global Level Roles**
 
-Cluster Level Roles
+**Cluster Level Roles**
 
-Project Level Roles
+**Project Level Roles**
 
 ![Rancher-server-global-Permissions-1](../images/Rancher-server-global-Permissions-1.jpg)
 
@@ -38,7 +38,7 @@ For him to manage Rancher management platform we need to elevate his permissions
 
 Lets check the existing permissions **superadmin** user have in Rancher and elevate him to permissions of administrator.
 
-login as "**admin**" user using **Log in with Keycloak** option and using the credentials as set during Exercise-4.
+login as "**admin**" user using **Log in with Keycloak** option and using the credentials as set during **Exercise-4**.
 
 Navigate to Home > Configuration > Users & Authentication > Users
 
@@ -60,11 +60,13 @@ Select "**Administrator**" and click **Save**
 
 ![rancher-server-after-integration-rancher-admin-assign-role-administrator-click-save-6](../images/rancher-server-after-integration-rancher-admin-assign-role-administrator-click-save-6.jpg)
 
-Re-login to Rancher UI using Keycloak option
+Logout from **admin** user
+
+Re-login to Rancher UI using **superadmin** user using **Log in with Keycloak** option
 
 ![rancher-server-after-integration-superadmin-login-after-role-assignment-7](../images/rancher-server-after-integration-superadmin-login-after-role-assignment-7.jpg)
 
-Now you can see more options such as Continuous Delivery, Cluster Manager etc and all the downstream clusters
+Now you can see **superadmin** user has full access to Rancher platform and all downstream clusters
 
 ![rancher-server-after-integration-superadmin-after-role-assignment-access-view-8](../images/rancher-server-after-integration-superadmin-after-role-assignment-access-view-8.jpg)
 
@@ -74,9 +76,10 @@ Now you can see more options such as Continuous Delivery, Cluster Manager etc an
 
 ## Assigning Cluster level permission to Manage individual clusters
 
-
 Based on Organization structure we have 3 admins and 4 developers.
+
 In the previous step we have elevated **superadmin** user to manage Rancher platform and all downstream cluster.
+
 Now we have to explicitly assign the rest of the 2 admins to manage their own respective cluster.
 
 In order to grant them explicit permissions to respective clusters we will need to grant user a cluster level permissions.
@@ -87,7 +90,7 @@ Now, we will now grant user "**admin1**" user as "**Cluster Owner**" role, so th
 
 login as "**admin**" user using **Log in with Keycloak** option and using the credentials as set during **Exercise-4.**
 
-Home > Explore CLUSTER > select "rke2-cluster1"
+Home > Explore CLUSTER > select "**rke2-cluster1**"
 
 ![rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-9](../images/rancher-server-after-integration-rancher-admin-assign-role-c1admin-rke2-cluster1-9.jpg)
 
@@ -129,15 +132,15 @@ Now we can see **rke2-cluster1** only under Explore Cluster option
 
 ![rancher-list-add-new-member-Screen-8](../images/rancher-list-add-new-member-Screen-8.jpg)
 
-Apps and Market place are only accessible to cluster owners
+**admin1** user is able to access Apps and Market place as shown below
 
 ![rancher-list-add-new-member-Screen-9](../images/rancher-list-add-new-member-Screen-9.jpg)
 
 
 
-We have successfully assigned user "admin1" user to manage cluster "rke2-cluster1"
+We have successfully assigned "**admin1**" user to manage cluster "**rke2-cluster1**"
 
-Similarly you can repeat the above steps for user "admin2" for cluster "rke2-cluster2".
+Similarly you can repeat the above steps for "**admin2**" user for cluster "**rke2-cluster2**".
 
 So for we have configured role and permissions for cluster administrators, in the next step we will have developers access to their respective projects /namespaces. 
 
@@ -149,11 +152,11 @@ In the development team we have mix of senior and junior developers. The senior 
 
 Till now we have used default built-in roles and permissions, lets explore ways to create custom roles and permissions to meet very specific needs.
 
-**dev1** user will be assigned as built-in cluster member role as well as a custom role to create and manage projects and namespaces.
+**senior-dev-group** group will be assigned as built-in cluster member role as well as a custom role to create and manage projects and namespaces.
 
-**dev2** user will be assigned custom role only to create and manage namespaces in existing projects.
+**junior-dev-group** group will be assigned custom role only to create and manage namespaces in existing projects.
 
-**dev2** user is not allowed to create any new projects.
+**junior-dev-group** group is not allowed to create any new projects.
 
 
 
@@ -187,6 +190,8 @@ watch
 
 Resource = **"Namespaces"** (from dropdown)
 
+Click **Create**
+
 ![17-rancher-server-after-integration-custom-project-role-creation-17](../images/17-rancher-server-after-integration-custom-project-role-creation-17.jpg)
 
 In the previous step we have created custom project/namespace role. It cannot be assigned to users directly. They have to be first associated to custom cluster role and thereafter to the user. 
@@ -217,7 +222,7 @@ Home> Explore Cluster > rke2-cluster1 > RBAC > Cluster Members
 
 Click **Add**
 
-Under Select Members dropdown option, select user "**dev1**"
+Under Select Members dropdown option, select group"**senior-dev-group**"
 
 Under **Cluster Permissions** > 
 
@@ -235,7 +240,7 @@ login as "**dev1**" user using **Log in with Keycloak** option and using the cre
 
 ![25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25](../images/25-rancher-server-after-integration-dev1-user--after-role-assignment-access-view-25.jpg)
 
-You can notice **dev1** user has both create Project and create Namespace option
+You can notice **dev1** user has both **Create Project** and **Create Namespace** options enabled
 
 ![26-rancher-server-after-integration-dev1-user-create-project-26](../images/26-rancher-server-after-integration-dev1-user-create-project-26.jpg)
 
@@ -263,21 +268,19 @@ Home> Explore Cluster > rke2-cluster1 > RBAC > Cluster Members
 
 Click **Add**
 
-Under Select Members dropdown option, select user "**dev2**"
+Under Select Members dropdown option, select group "**junior-dev-group**"
 
 Under Cluster Permissions > select "**custom-cluster-role1**"  and click on Create 
 
-Here, We have granted him custom cluster role only
+Here, We have granted **custom cluster role** only
 
 ![rancher-list-add-new-member-Screen-12](../images/rancher-list-add-new-member-Screen-12.jpg)
 
-
-
-Since we need to give him access to view project level view, so we assign built-in  additional custom role "view all projects" and click create
+Since we need to give him access to view project level view, so we assign built-in  additional custom role "**view all projects**" and Click **Create**
 
 ![rancher-list-add-new-member-Screen-13](../images/rancher-list-add-new-member-Screen-13.jpg)
 
-Finally we have assigned all built-in and custom roles for users "dev1" and "dev2"
+Finally we have assigned all built-in and custom roles for groups "**senior-dev-group**" and "**junior-dev-group**"
 
 ![rancher-list-add-new-member-Screen-14](../images/rancher-list-add-new-member-Screen-14-1646751042375.jpg)
 
@@ -285,9 +288,9 @@ Finally we have assigned all built-in and custom roles for users "dev1" and "dev
 
 Logout from **admin1** user
 
-login as "**dev2**" user using **Log in with Keycloak** option and using the credentials as set during **Exercise-4.** 
+login as "**dev3**" user using **Log in with Keycloak** option and using the credentials as set during **Exercise-4.** 
 
-You can notice **dev2** user doesn't have option for creating new projects, but create new namespace in the existing Projects.
+You can notice **dev3** user doesn't have option for creating new projects, but create new namespace in the existing Projects.
 
 ![30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30](../images/30-rancher-server-after-integration-dev1-user--after-role-assignment-create-namespace-only-30.jpg)
 

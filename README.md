@@ -21,19 +21,19 @@ analytics and troubleshooting the systems. This workshop is designed to showcase
 
 ### SUSE Rancher:
 
-Open Source Container Management Platform
+**Open Source Container Management Platform**
 Your organization is deploying Kubernetes clusters to accelerate digital transformation. SUSE Rancher unifies these clusters to ensure consistent operations, workload management, and enterprise-grade security – from core to cloud to edge.
 
-Supports any Certified Kubernetes Distribution
+**Supports any Certified Kubernetes Distribution**
 SUSE Rancher supports any CNCF-certified Kubernetes distribution. For on-premises workloads, we offer the RKE. We support all the public cloud distributions, including EKS, AKS, and GKE. At the edge, we offer K3s.
 
-Simplifies Multi-Cluster Operations
+**Simplifies Multi-Cluster Operations**
 SUSE Rancher provides simple, consistent cluster operations, including provisioning, version management, visibility and diagnostics, monitoring and alerting, and centralized audit.
 
-Unifies Security, Policy, and User Management
+**Unifies Security, Policy, and User Management**
 SUSE Rancher lets you automate processes and applies a consistent set of user access and security policies for all your clusters, no matter where they’re running.
 
-Drives Adoption with Shared Tools & Services
+**Drives Adoption with Shared Tools & Services**
 SUSE Rancher provides a rich catalogue of services for building, deploying, and scaling containerized applications, including app packaging, CI/CD, logging, monitoring, and service mesh.
 
 ### Keycloak:
@@ -52,15 +52,11 @@ Kibana is UI tool for querying, data visualization and dashboards. It is a query
 
 
 
-## Solution architecture
+## Solution Architecture
 
-Derek to provide the lab architecture.
+**1 VM - Rancher server (RKE2), Keycloak and Elastic Search Instance**
 
-1 VM - Rancher server (RKE2), Keycloak and Elastic Search Instance
-
-2 VM - Downstream RKE2 clusters (single node cluster)
-
-
+**2 VM - Downstream RKE2 clusters (single node cluster)**
 
 All of the above environment will be pre-installed and made available for the workshop. The login credentials and URL's will be shared via web link.
 
@@ -70,19 +66,19 @@ In this workshop we will help you integrating Keycloak as an external authentica
 
 This repository contains following Exercise to complete tasks related to Centralised Authentication using Keycloak and Centralised Logging using EFK Stack.
 
-- [Exercise-1-Accessing-Rancher-and-Keycloak](./docs/Exercise-1-Accessing-Rancher-and-Keycloak.md)
+- [Exercise-1: Accessing-Rancher-and-Keycloak](./docs/Exercise-1-Accessing-Rancher-and-Keycloak.md)
 
-- [Exercise-2-Configure-Keycloak.md](./docs/Exercise-2-Configure-Keycloak.md)
+- [Exercise-2: Configure-Keycloak.md](./docs/Exercise-2-Configure-Keycloak.md)
 
-- [Exercise-3-Integrate-Rancher-with-Keycloak](./docs/Exercise-3-Integrate-Rancher-with-Keycloak.md)
+- [Exercise-3: Integrate-Rancher-with-Keycloak](./docs/Exercise-3-Integrate-Rancher-with-Keycloak.md)
 
-- [Exercise-4-Create-Keycloak-Users-Role-Mapping](./docs/Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
+- [Exercise-4: Create-Keycloak-Users-Role-Mapping](./docs/Exercise-4-Create-Keycloak-Users-Role-Mapping.md)
 
-- [Exercise 5 - Rancher Roles & Assignment](./docs/Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
+- [Exercise 5: Rancher Roles & Assignment](./docs/Exercise-5-Rancher-Role-Assignment-and-RBAC.md)
 
-- [Exercise 6 - Configure Rancher Logging](./docs/Exercise-6-Configure-Rancher-Logging.md)
+- [Exercise 6: Configure Rancher Logging](./docs/Exercise-6-Configure-Rancher-Logging.md)
 
-- [Exercise 7 - View Logs Using Kibana Dashboard](./docs/Exercise-7-View-Logs-Using-Kibana-Dashboard.md)
+- [Exercise 7: View Logs Using Kibana Dashboard](./docs/Exercise-7-View-Logs-Using-Kibana-Dashboard.md)
 
   
 
