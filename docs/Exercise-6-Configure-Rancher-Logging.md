@@ -191,13 +191,11 @@ Final ClusterOutputs should look as below
 
 We have configured the cluster level output for **rke2-cluster1** to Elastic Search
 
-
-
 After creating **ClusterOutputs**, if it is found missing, please follow below steps.
 
-Below screen shows that previous created **ClusterOutputs** configuration  is missing
+Below screen shows that previously created **ClusterOutputs** configuration  is missing
 
-![rancher-logging-cluster-output-not-visible-1](../../Rancher-Keycloak-EFK/rancher-hands-on-workshop-docs/images/rancher-logging-cluster-output-not-visible-1.jpg)
+![rancher-logging-cluster-output-not-visible-1](../images/rancher-logging-cluster-output-not-visible-1.jpg)
 
 Home > Explore Cluster > rke2-cluster1 >Workload 
 
@@ -205,11 +203,11 @@ Click on **Deployments** and select **All Namespaces**
 
 You can now see ClusterOutputs menu counter incremented to 1
 
-![rancher-logging-cluster-output-not-visible-select-all-namespaces-2](../../Rancher-Keycloak-EFK/rancher-hands-on-workshop-docs/images/rancher-logging-cluster-output-not-visible-select-all-namespaces-2.jpg)
+![rancher-logging-cluster-output-not-visible-select-all-namespaces-2](../images/rancher-logging-cluster-output-not-visible-select-all-namespaces-2.jpg)
 
 **ClusterOutputs** configuration visible as below
 
-![rancher-logging-cluster-output-visible-3](../../Rancher-Keycloak-EFK/rancher-hands-on-workshop-docs/images/rancher-logging-cluster-output-visible-3.jpg)
+![rancher-logging-cluster-output-visible-3](../images/rancher-logging-cluster-output-visible-3.jpg)
 
 
 
